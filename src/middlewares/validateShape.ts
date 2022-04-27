@@ -5,6 +5,7 @@ const validateShape =
   (shape: AnySchema) =>
   async (req: Request, res: Response, next: NextFunction) => {
     try {
+      console.log("validateShape: ", shape);
       req.validate = await shape.validate(req.body);
 
       return next();

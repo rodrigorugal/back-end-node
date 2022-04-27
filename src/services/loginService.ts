@@ -8,8 +8,6 @@ const loginService = async (email: string, password: string) => {
     email
   )) as IUserInterface;
 
-  console.log(user);
-
   if (!user) {
     throw new Error("User not found");
   }

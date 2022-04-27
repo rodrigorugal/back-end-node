@@ -13,7 +13,7 @@ const userRoutes = (app: Express) => {
 
   userRoute.post("/", validateShape(createUserShap), createUserController);
 
-  userRoute.get("/", validateAuthToken, getUserController);
+  userRoute.get("/", getUserController);
 
   userRoute.patch("/:id", validateShape(updateUserShap), updateUserController);
 
