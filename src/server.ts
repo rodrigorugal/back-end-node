@@ -1,11 +1,10 @@
 import "reflect-metadata";
-import {createConnection} from "typeorm";
+
+import { createConnection } from "typeorm";
 import app from "./app";
 
-const PORT = process.env.PORT || "3000";
-
-createConnection().then(async connection => {
-
-    app.listen(PORT)
-
-}).catch(error => console.log(error));
+createConnection()
+  .then(async (connection) => {
+    app.listen(process.env.PORT || 3000);
+  })
+  .catch((error) => console.log(error));

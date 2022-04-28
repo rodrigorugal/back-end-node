@@ -11,7 +11,11 @@ import { createUserShap, updateUserShap } from "../../shapes/createUserShap";
 const userRoutes = (app: Express) => {
   const userRoute = Router();
 
-  userRoute.post("/", validateShape(createUserShap), createUserController);
+  userRoute.post(
+    "/register",
+    validateShape(createUserShap),
+    createUserController
+  );
 
   userRoute.get("/", getUserController);
 
