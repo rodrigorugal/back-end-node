@@ -29,6 +29,4 @@ const prodConfig = {
   },
 } as ConnectionOptions;
 
-console.log(process.env.DATABASE_URL);
-
 export default process.env.NODE_ENV === "production" ? prodConfig : devConfig;
